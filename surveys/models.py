@@ -8,12 +8,18 @@ class Question(models.Model):
     pub_date = models.DateTimeField('date published')
     is_active = models.BooleanField(default=True)
 
+    def __str__(self):
+        return "{0}: {1}".format(self.slug, self.question_text)
+
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0, editable=False)
     is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return "{0}: {1}".format(self.question.slug, self.choice_text)
 
 class UserChoice(models.Model):
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
