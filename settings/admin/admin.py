@@ -6,6 +6,8 @@ ADMIN_TOOLS_APPS = [
     'admin_tools.dashboard'
 ]
 
+ADMIN_TOOLS_INDEX_DASHBOARD = "settings.admin.dashboard.CustomIndexDashboard"
+
 INSTALLED_APPS = ADMIN_TOOLS_APPS + INSTALLED_APPS
 
 TEMPLATES = [
