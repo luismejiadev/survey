@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+    survey-mysql:
+        image: mysql:5.7
+        restart: always
+        container_name: survey-mysql
+        env_file:
+          - ./enviroments/development.env
+        ports:
+          - '3306:3306'
+
+    survey-django:
+        build:
+          context: .
+          dockerfile: ./compose/django/Dockerfile
+        image: survey_django
+        container_name: survey-django
+        restart: unless-stopped
+        stdin_open: true
+        tty: true
+        env_file:
+          - ./enviroments/development.env
+        depends_on:
+          - survey-mysql
+          - survey-redis
+          - survey-rabbitmq
+        links:
+          - "survey-mysql:mysql_db"
+          - "survey-redis:redis_db"
+          - "survey-rabbitmq:rabbitmq_host"
+        volumes:
+          - .:/srv/survey
+          - ./compose/supervisor/conf.d:/etc/supervisor/conf.d
+          - ./volumes/logs:/var/log
+        command: /start.sh
+        ports:
+          - "8000:8000"
+
+    survey-redis:
+        image: redis:4.0
+        container_name: survey-redis
+        env_file:
+          - ./enviroments/development.env
+        ports:
+          - "6379:6379"
+
+    survey-rabbitmq:
+        image: rabbitmq:3.7.8
+        container_name: survey-rabbitmq
+        env_file:
+          - ./enviroments/development.env
+        volumes:
+          - ./compose/rabbitmq/watch-rabbitmq.sh:/var/lib/rabbitmq/watch-rabbitmq.sh
+        ports:
+          - "5672:5672"
+          - "15672:15672"
