@@ -13,3 +13,4 @@ RUN chmod +x /start.sh && chown survey:survey /start.sh
 USER survey
 # COPY ./compose/django/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # CMD ["/usr/bin/supervisord"]
+
