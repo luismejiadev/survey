@@ -8,7 +8,7 @@ class ChoiceInline(admin.TabularInline):
 
 class QuestionAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
-    list_display = ['question_text', 'pub_date', 'is_active']
+    list_display = ['id', 'slug', 'question_text', 'pub_date', 'is_active']
     list_filter = ['survey', 'is_active']
     inlines = [ChoiceInline]
     actions = ['active_questions', 'deactive_questions']
