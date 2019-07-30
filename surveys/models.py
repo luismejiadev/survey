@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from .managers import ActiveManager, QuestionManager
 
 
 class Question(models.Model):
@@ -7,6 +8,8 @@ class Question(models.Model):
     slug = models.SlugField(max_length=20)
     pub_date = models.DateTimeField('date published')
     is_active = models.BooleanField(default=True)
+    objects = QuestionManager()
+    active_objects = ActiveManager()
 
     def __str__(self):
         return "{0}: {1}".format(self.slug, self.question_text)
@@ -17,6 +20,7 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0, editable=False)
     is_active = models.BooleanField(default=True)
+    active_objects = ActiveManager()
 
     def __str__(self):
         return "{0}: {1}".format(self.question.slug, self.choice_text)
