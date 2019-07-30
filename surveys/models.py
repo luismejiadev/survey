@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
 from .managers import ActiveManager, QuestionManager
 import datetime
-from surveys import utils
+from .utils import survey_end_date
 
 
 class Survey(models.Model):
@@ -12,7 +13,7 @@ class Survey(models.Model):
         help_text='First day of the survey'
     )
     end_date = models.DateField(
-        default=utils.survey_end_date,
+        default=survey_end_date,
         help_text='Last day of the survey'
     )
     is_active = models.BooleanField(default=True)
@@ -20,12 +21,26 @@ class Survey(models.Model):
     def __str__(self):
         return self.slug
 
+    def get_absolute_url(self):
+        return reverse('survey_detail', args=[self.slug])
+
+    @property
+    def questions_count(self):
+        return self.question_set.count()
+
+    @property
+    def active_questions_count(self):
+        return self.question_set.filter(is_active=True).count()
+
+    @property
+    def user_choices_count(self):
+        return self.question_set.filter(userchoice__isnull=False).count()
 
 class Question(models.Model):
     survey = models.ForeignKey(Survey, on_delete=models.CASCADE)
-    question_text = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=20)
-    pub_date = models.DateTimeField('date published')
+    question_text = models.CharField(max_length=400)
+    slug = models.SlugField(max_length=30)
+    pub_date = models.DateTimeField(default=survey_end_date)
     is_active = models.BooleanField(default=True)
 
     objects = QuestionManager()
