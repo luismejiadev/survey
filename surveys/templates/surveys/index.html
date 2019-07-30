@@ -1,0 +1,35 @@
+{% extends 'surveys/base.html' %}
+{% load i18n %}
+{% block extra_css %}
+<style>
+    .figure { left: {{current_progress}};}
+</style>
+{% endblock extra_css%}
+
+{% block header %}
+<div class="progress">
+  <div class="progress-bar bg-success" role="progressbar" style="width: {{current_progress}}%" aria-valuenow="{{current_progress}}" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+{{ block.super }}
+{% endblock header %}
+
+{% block content %}
+    {% include 'surveys/messages.html' %}
+    {% if current_progress == 0 and request.GET.lauch == 'true' %}
+         <h2>Welcome!<br> to the Survey App</h2>
+        <p><a href="https://www.linkedin.com/in/luiscarlosmejia/" target="_blank">By: Luis Carlos Mejia</a></p>
+        {% include 'surveys/rocket.html' %}
+        <p><a class="btn btn-primary btn-primary" href="?lauch=true">Launch</a></p>
+    {% elif current_progress == 100 %}
+        <h2>{% trans "Contratulations!" %}</h2>
+        <h2>{% trans "You finish the Survey!" %}</h2>
+        <p><a href="https://www.linkedin.com/in/luiscarlosmejia/" target="_blank">By: Luis Carlos Mejia</a></p>
+        {% include 'surveys/rocket.html' %}
+        <p><a class="btn btn-primary btn-primary" href="{% url 'start_again' %}">Launch</a></p>
+    {% else %}
+        {% for question in questions %}
+          {% include 'surveys/question.html' with question=question %}
+        {% endfor %}
+    {% endif %}
+{% endblock content %}
+{% block footer %}{% endblock footer %}
