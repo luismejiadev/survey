@@ -8,8 +8,10 @@ class ActiveManager(models.Manager):
 
 class QuestionManager(models.Manager):
     def random_get(self, session_key=None, **kwargs):
-        queryset = self.get_queryset().filter(**kwargs)
+        queryset = self.get_queryset().filter(is_active=True).filter(**kwargs)
         if session_key is not None:
             queryset = queryset.exclude(userchoice__session_key=session_key).distinct()
+        if queryset.count == 1:
+            return queryset[0]
         return random.choices(queryset).pop() if queryset else None
 
