@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+    survey-mysql:
+        image: mysql:5.7
+        restart: always
+        container_name: survey-mysql
+        env_file:
+          - ./enviroments/development.env
+        ports:
+          - '3306:3306'
+        # Volume where data will be persisted
+        # Read: https://hub.docker.com/_/mysql - Environment Variables
+        # Do note that none of the variables will have any effect
+        # if you start the container with a data directory
+        # that already contains a database
+        volumes:
+          - ./volumes/mysql:/var/lib/mysql
+
+    survey-django:
+        build:
+          context: .
+          dockerfile: ./compose/django/Dockerfile
+        image: survey_django
+        stdin_open: true
+        tty: true
+        restart: unless-stopped
+        container_name: survey-django
+        env_file:
+          - ./enviroments/development.env
+        depends_on:
+          - survey-mysql
+          - survey-redis
+          - survey-rabbitmq
+        links:
+          - "survey-mysql:mysql_db"
+          - "survey-redis:redis_db"
+          - "survey-rabbitmq:rabbitmq_host"
+        volumes:
+          - .:/srv/survey
+          - ./compose/supervisor/conf.d:/etc/supervisor/conf.d
+          - ./volumes/logs:/var/log
+        command: python manage.py runserver 0.0.0.0:8000
+        ports:
+          - "8000:8000"
+
+    survey-redis:
+        image: redis:4.0.9
+        container_name: survey-redis
+        ports:
+          - "6379:6379"
+
+    survey-rabbitmq:
+        image: rabbitmq:3.7.8
+        container_name: survey-rabbitmq
+        env_file:
+          - ./enviroments/development.env
+        volumes:
+          - ./compose/rabbitmq/watch-rabbitmq.sh:/var/lib/rabbitmq/watch-rabbitmq.sh
+        ports:
+          - "5672:5672"
+          - "15672:15672"
