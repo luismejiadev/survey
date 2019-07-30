@@ -1,0 +1,926 @@
+[
+{
+    "model": "surveys.question",
+    "pk": 1,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following options best describes you today? Here, by \"developer\" we mean \"someone who writes code.\"",
+        "slug": "MainBranch",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 2,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you code as a hobby?",
+        "slug": "Hobbyist",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 3,
+    "fields": {
+        "survey": 1,
+        "question_text": "How often do you contribute to open source?",
+        "slug": "OpenSourcer",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 4,
+    "fields": {
+        "survey": 1,
+        "question_text": "How do you feel about the quality of open source software (OSS)?",
+        "slug": "OpenSource",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 5,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following best describes your current employment status?",
+        "slug": "Employment",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 6,
+    "fields": {
+        "survey": 1,
+        "question_text": "In which country do you currently reside?",
+        "slug": "Country",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 7,
+    "fields": {
+        "survey": 1,
+        "question_text": "Are you currently enrolled in a formal, degree-granting college or university program?",
+        "slug": "Student",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 8,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following best describes the highest level of formal education that you\u2019ve completed?",
+        "slug": "EdLevel",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 9,
+    "fields": {
+        "survey": 1,
+        "question_text": "What was your main or most important field of study?",
+        "slug": "UndergradMajor",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 10,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following types of non-degree education have you used or participated in? Please select all that apply.",
+        "slug": "EduOther",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 11,
+    "fields": {
+        "survey": 1,
+        "question_text": "Approximately how many people are employed by the company or organization you work for?",
+        "slug": "OrgSize",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 12,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following describe you? Please select all that apply.",
+        "slug": "DevType",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 13,
+    "fields": {
+        "survey": 1,
+        "question_text": "Including any education, how many years have you been coding?",
+        "slug": "YearsCode",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 14,
+    "fields": {
+        "survey": 1,
+        "question_text": "At what age did you write your first line of code or program? (E.g., webpage, Hello World, Scratch project)",
+        "slug": "Age1stCode",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 15,
+    "fields": {
+        "survey": 1,
+        "question_text": "How many years have you coded professionally (as a part of your work)?",
+        "slug": "YearsCodePro",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 16,
+    "fields": {
+        "survey": 1,
+        "question_text": "Overall, how satisfied are you with your career thus far?",
+        "slug": "CareerSat",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 17,
+    "fields": {
+        "survey": 1,
+        "question_text": "How satisfied are you with your current job? (If you work multiple jobs, answer for the one you spend the most hours on.)",
+        "slug": "JobSat",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 18,
+    "fields": {
+        "survey": 1,
+        "question_text": "How confident are you that your manager knows what they\u2019re doing?",
+        "slug": "MgrIdiot",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 19,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you believe that you need to be a manager to make more money?",
+        "slug": "MgrMoney",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 20,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you want to become a manager yourself in the future?",
+        "slug": "MgrWant",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 21,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following best describes your current job-seeking status?",
+        "slug": "JobSeek",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 22,
+    "fields": {
+        "survey": 1,
+        "question_text": "When was the last time that you took a job with a new employer?",
+        "slug": "LastHireDate",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 23,
+    "fields": {
+        "survey": 1,
+        "question_text": "In your most recent successful job interview (resulting in a job offer), you were asked to... (check all that apply)",
+        "slug": "LastInt",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 24,
+    "fields": {
+        "survey": 1,
+        "question_text": "Have you ever been asked to solve FizzBuzz in an interview?",
+        "slug": "FizzBuzz",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 25,
+    "fields": {
+        "survey": 1,
+        "question_text": "Imagine that you are deciding between two job offers with the same compensation, benefits, and location. Of the following factors, which 3 are MOST important to you?",
+        "slug": "JobFactors",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 26,
+    "fields": {
+        "survey": 1,
+        "question_text": "Think back to the last time you updated your resum\u00e9, CV, or an online profile on a job site. What is the PRIMARY reason that you did so?",
+        "slug": "ResumeUpdate",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 27,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which currency do you use day-to-day? If your answer is complicated, please pick the one you're most comfortable estimating in.",
+        "slug": "CurrencySymbol",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 28,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which currency do you use day-to-day? If your answer is complicated, please pick the one you're most comfortable estimating in.",
+        "slug": "CurrencyDesc",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 29,
+    "fields": {
+        "survey": 1,
+        "question_text": "What is your current total compensation (salary, bonuses, and perks, before taxes and deductions), in `CurrencySymbol`? Please enter a whole number in the box below, without any punctuation. If you are paid hourly, please estimate an equivalent weekly, monthly, or yearly salary. If you prefer not to answer, please leave the box empty.",
+        "slug": "CompTotal",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 30,
+    "fields": {
+        "survey": 1,
+        "question_text": "Is that compensation weekly, monthly, or yearly?",
+        "slug": "CompFreq",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 31,
+    "fields": {
+        "survey": 1,
+        "question_text": "Salary converted to annual USD salaries using the exchange rate on 2019-02-01, assuming 12 working months and 50 working weeks.",
+        "slug": "ConvertedComp",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 32,
+    "fields": {
+        "survey": 1,
+        "question_text": "On average, how many hours per week do you work?",
+        "slug": "WorkWeekHrs",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 33,
+    "fields": {
+        "survey": 1,
+        "question_text": "How structured or planned is your work?",
+        "slug": "WorkPlan",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 34,
+    "fields": {
+        "survey": 1,
+        "question_text": "Of these options, what are your greatest challenges to productivity as a developer? Select up to 3:",
+        "slug": "WorkChallenge",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 35,
+    "fields": {
+        "survey": 1,
+        "question_text": "How often do you work remotely?",
+        "slug": "WorkRemote",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 36,
+    "fields": {
+        "survey": 1,
+        "question_text": "Where would you prefer to work?",
+        "slug": "WorkLoc",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 37,
+    "fields": {
+        "survey": 1,
+        "question_text": "For the specific work you do, and the years of experience you have, how do you rate your own level of competence?",
+        "slug": "ImpSyn",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 38,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you review code as part of your work?",
+        "slug": "CodeRev",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 39,
+    "fields": {
+        "survey": 1,
+        "question_text": "On average, how many hours per week do you spend on code review?",
+        "slug": "CodeRevHrs",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 40,
+    "fields": {
+        "survey": 1,
+        "question_text": "Does your company regularly employ unit tests in the development of their products?",
+        "slug": "UnitTests",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 41,
+    "fields": {
+        "survey": 1,
+        "question_text": "How does your company make decisions about purchasing new technology (cloud, AI, IoT, databases)?",
+        "slug": "PurchaseHow",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 42,
+    "fields": {
+        "survey": 1,
+        "question_text": "What level of influence do you, personally, have over new technology purchases at your organization?",
+        "slug": "PurchaseWhat",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 43,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following programming, scripting, and markup languages have you done extensive development work in over the past year, and which do you want to work in over the next year?  (If you both worked with the language and want to continue to do so, please check both boxes in that row.)",
+        "slug": "LanguageWorkedWith",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 44,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following programming, scripting, and markup languages have you done extensive development work in over the past year, and which do you want to work in over the next year?  (If you both worked with the language and want to continue to do so, please check both boxes in that row.)",
+        "slug": "LanguageDesireNextYear",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 45,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following database environments have you done extensive development work in over the past year, and which do you want to work in over the next year?   (If you both worked with the database and want to continue to do so, please check both boxes in that row.)",
+        "slug": "DatabaseWorkedWith",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 46,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following database environments have you done extensive development work in over the past year, and which do you want to work in over the next year?   (If you both worked with the database and want to continue to do so, please check both boxes in that row.)",
+        "slug": "DatabaseDesireNextYear",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 47,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following platforms have you done extensive development work for over the past year?   (If you both developed for the platform and want to continue to do so, please check both boxes in that row.)",
+        "slug": "PlatformWorkedWith",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 48,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following platforms have you done extensive development work for over the past year?   (If you both developed for the platform and want to continue to do so, please check both boxes in that row.)",
+        "slug": "PlatformDesireNextYear",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 49,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following web frameworks have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the framework and want to continue to do so, please check both boxes in that row.)",
+        "slug": "WebFrameWorkedWith",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 50,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following web frameworks have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the framework and want to continue to do so, please check both boxes in that row.)",
+        "slug": "WebFrameDesireNextYear",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 51,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following other frameworks, libraries, and tools have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the technology and want to continue to do so, please check both boxes in that row.)",
+        "slug": "MiscTechWorkedWith",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 52,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following other frameworks, libraries, and tools have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the technology and want to continue to do so, please check both boxes in that row.)",
+        "slug": "MiscTechDesireNextYear",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 53,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which development environment(s) do you use regularly?  Please check all that apply.",
+        "slug": "DevEnviron",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 54,
+    "fields": {
+        "survey": 1,
+        "question_text": "What is the primary operating system in which you work?",
+        "slug": "OpSys",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 55,
+    "fields": {
+        "survey": 1,
+        "question_text": "How do you use containers (Docker, Open Container Initiative (OCI), etc.)?",
+        "slug": "Containers",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 56,
+    "fields": {
+        "survey": 1,
+        "question_text": "How is your organization thinking about or implementing blockchain technology?",
+        "slug": "BlockchainOrg",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 57,
+    "fields": {
+        "survey": 1,
+        "question_text": "Blockchain / cryptocurrency technology is primarily:",
+        "slug": "BlockchainIs",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 58,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you think people born today will have a better life than their parents?",
+        "slug": "BetterLife",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 59,
+    "fields": {
+        "survey": 1,
+        "question_text": "Are you the \"IT support person\" for your family?",
+        "slug": "ITperson",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 60,
+    "fields": {
+        "survey": 1,
+        "question_text": "Have you tried turning it off and on again?",
+        "slug": "OffOn",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 61,
+    "fields": {
+        "survey": 1,
+        "question_text": "What social media site do you use the most?",
+        "slug": "SocialMedia",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 62,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you prefer online chat or IRL conversations?",
+        "slug": "Extraversion",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 63,
+    "fields": {
+        "survey": 1,
+        "question_text": "What do you call it?",
+        "slug": "ScreenName",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 64,
+    "fields": {
+        "survey": 1,
+        "question_text": "To the best of your memory, when did you first visit Stack Overflow?",
+        "slug": "SOVisit1st",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 65,
+    "fields": {
+        "survey": 1,
+        "question_text": "How frequently would you say you visit Stack Overflow?",
+        "slug": "SOVisitFreq",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 66,
+    "fields": {
+        "survey": 1,
+        "question_text": "I visit Stack Overflow to... (check all that apply)",
+        "slug": "SOVisitTo",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 67,
+    "fields": {
+        "survey": 1,
+        "question_text": "On average, how many times a week do you find (and use) an answer on Stack Overflow?",
+        "slug": "SOFindAnswer",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 68,
+    "fields": {
+        "survey": 1,
+        "question_text": "Think back to the last time you solved a coding problem using Stack Overflow, as well as the last time you solved a problem using a different resource. Which was faster?",
+        "slug": "SOTimeSaved",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 69,
+    "fields": {
+        "survey": 1,
+        "question_text": "About how much time did you save? If you're not sure, please use your best estimate.",
+        "slug": "SOHowMuchTime",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 70,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you have a Stack Overflow account?",
+        "slug": "SOAccount",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 71,
+    "fields": {
+        "survey": 1,
+        "question_text": "How frequently would you say you participate in Q&A on Stack Overflow? By participate we mean ask, answer, vote for, or comment on questions.",
+        "slug": "SOPartFreq",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 72,
+    "fields": {
+        "survey": 1,
+        "question_text": "Have you ever used or visited Stack Overflow Jobs?",
+        "slug": "SOJobs",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 73,
+    "fields": {
+        "survey": 1,
+        "question_text": "Have you ever used Stack Overflow for Enterprise or Stack Overflow for Teams?",
+        "slug": "EntTeams",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 74,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you consider yourself a member of the Stack Overflow community?",
+        "slug": "SOComm",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 75,
+    "fields": {
+        "survey": 1,
+        "question_text": "Compared to last year, how welcome do you feel on Stack Overflow?",
+        "slug": "WelcomeChange",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 76,
+    "fields": {
+        "survey": 1,
+        "question_text": "Would you like to see any of the following on Stack Overflow? Check all that apply.",
+        "slug": "SONewContent",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 77,
+    "fields": {
+        "survey": 1,
+        "question_text": "What is your age (in years)? If you prefer not to answer, you may leave this question blank.",
+        "slug": "Age",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 78,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following do you currently identify as? Please select all that apply. If you prefer not to answer, you may leave this question blank.",
+        "slug": "Gender",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 79,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you identify as transgender?",
+        "slug": "Trans",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 80,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following do you currently identify as? Please select all that apply. If you prefer not to answer, you may leave this question blank.",
+        "slug": "Sexuality",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 81,
+    "fields": {
+        "survey": 1,
+        "question_text": "Which of the following do you identify as? Please check all that apply. If you prefer not to answer, you may leave this question blank.",
+        "slug": "Ethnicity",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 82,
+    "fields": {
+        "survey": 1,
+        "question_text": "Do you have any dependents (e.g., children, elders, or others) that you care for?",
+        "slug": "Dependents",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 83,
+    "fields": {
+        "survey": 1,
+        "question_text": "How do you feel about the length of the survey this year?",
+        "slug": "SurveyLength",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+},
+{
+    "model": "surveys.question",
+    "pk": 84,
+    "fields": {
+        "survey": 1,
+        "question_text": "How easy or difficult was this survey to complete?",
+        "slug": "SurveyEase",
+        "pub_date": "2019-08-14T00:00:00Z",
+        "is_active": true
+    }
+}
+]
