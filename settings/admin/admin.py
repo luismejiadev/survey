@@ -1,4 +1,4 @@
-from settings.base import *
+from settings.local import *
 
 
 ADMIN_TOOLS_APPS = [

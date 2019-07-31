@@ -1,5 +1,7 @@
 {% extends 'surveys/base.html' %}
-
+{% block extra_css %}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock extra_css %}
 {% block content %}
 <h1>Surveys</h1>
 
@@ -10,10 +12,12 @@
       <a href="{{ survey.get_absolute_url }}">
         <h3>{{ survey.slug }}</h3>
         <p class="font-bold info">
+          <i class="fa fa-bar-chart"></i>
           <span title="questions_count">
             Questions: {{survey.questions_count}}
           </span><br/>
           <span title="active_questions_count">
+            <i class="fa fa-check-circle"></i>
             Active Questions: {{survey.active_questions_count}}
           </span><br/>
           <span title="answers">
@@ -26,6 +30,7 @@
 </div>
 {% endfor %}
 
+{% if object_list.number < object_list.paginator.num_pages %}
 <div class="pagination">
   <span class="step-links">
     {% if object_list.has_previous %}
@@ -43,4 +48,5 @@
     {% endif %}
   </span>
 </div>
+{% endif %}
 {% endblock content %}

@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from .views import (
     IndexView, UserChoiceCreateView,
     SurveyDetailView, SurveyListView,
-    start_again
+    start_again, questions_view
 )
 
 urlpatterns = [
@@ -14,6 +14,7 @@ urlpatterns = [
     path('question/<int:question_id>/choice', UserChoiceCreateView.as_view(), name='user_choice'),
     path('start-again', start_again, name='start_again'),
     path('surveys/<slug:slug>/', SurveyDetailView.as_view(), name='survey_detail'),
-    path('surveys/', SurveyListView.as_view(), name='survey_list')
+    path('surveys/', SurveyListView.as_view(), name='survey_list'),
+    path('surveys/<slug:slug>/questions.json', questions_view, name='questions_view')
 ]
 
