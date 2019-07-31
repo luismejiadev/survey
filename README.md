@@ -1,6 +1,6 @@
 ## Django Survey App
 
-[working on Live Demo](http://luismejia.dev/)
+[Live Demo](http://luismejia.dev/)
 
 
 |  Landing             |  Survey Form  |
