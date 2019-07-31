@@ -48,6 +48,19 @@ I use Django Admin tools bar to present dashboards in the admin, and based on th
 
 ![Survey App](./docs/images/survey_detail.png)
 
+## UX Details that matter
+
+![Mobile Details](./docs/images/ux.png)
+
+### Label click
+
+RadioButtons are tiny in nature, and they can be hard to click or tap. To enlarge the target area, the Survey App let users select an option by clicking or tapping not just that small square, but also the label or associated words.
+
+### Progress Bar
+
+**wouldn’t it be great if I know how much longer do I have to wait?**
+Progress bars are made for such time-taking actions(as surveys). The thought behind it is: if a user knows the time a particular action will take, he will be prepared to wait for it. Or complete the activity in his free time. But he won’t be exasperated. Keeping the user experience intact.
+
 ## What can you find in this app?
 
 
