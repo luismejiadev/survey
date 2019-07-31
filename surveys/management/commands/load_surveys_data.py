@@ -18,6 +18,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # Read Running management commands from your code
         # https://docs.djangoproject.com/en/2.2/ref/django-admin/#running-management-commands-from-your-code
+        call_command(LoadDataCommand(), 'users')
         call_command(LoadDataCommand(), 'surveys')
         call_command(LoadDataCommand(), 'questions')
         self.load_user_choices()
