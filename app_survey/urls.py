@@ -3,6 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+admin.site.site_header = "Survey App Admin"
+admin.site.site_title = "Survey App"
+admin.site.index_title = "Welcome to Survey App"
+
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin_tools/', include('admin_tools.urls')),
