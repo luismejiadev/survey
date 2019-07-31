@@ -1,0 +1,39 @@
+{% extends 'surveys/base.html' %}
+{% load i18n %}
+
+{% block content %}
+<form action="{% url 'login' %}" method="post" id="login-form">
+    {% csrf_token %}
+    <div class="card bg-light mb-3 login-card" style="max-width: 18rem;">
+      <div class="card-header">
+        Login Form
+      </div>
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          {% for error in form.non_field_errors %}
+            <span>{{ error }}</span><br/>
+          {% endfor %}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %}
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item custom-control custom-radio">
+            <input type="text" name="username" id="id_username" class="form-control" placeholder="User Name" required autofocus>
+        </li>
+        <li class="list-group-item custom-control custom-radio">
+            <input type="password" name="password" id="id_password" class="form-control" placeholder="Password" required>
+            <label class="float-left">
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </li>
+      </ul>
+      <div class="card-footer">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      </div>
+    </div>
+</form>
+{% endblock content %}
+{% block footer %}{% endblock footer %}
+
