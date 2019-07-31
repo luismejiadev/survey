@@ -1,9 +1,86 @@
 {% extends 'surveys/base.html' %}
 
 {% block content %}
-    <h1>{{ object.headline }}</h1>
-    <p>{{ object.content }}</p>
-    <p>Reporter: {{ object.reporter }}</p>
-    <p>Published: {{ object.pub_date|date }}</p>
-    <p>Date: {{ now|date }}</p>
+<style>
+  .surveys div{
+    margin: 0 auto !important;
+    text-align: center;
+  }
+</style>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Dashboard</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group mr-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary time" onclick="updateData(this, 'day')" id="day">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              1D
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-secondary time" onclick="updateData(this, 'week')" id="week">
+              1W
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-secondary time " onclick="updateData(this, 'month')"  id="month">
+              1M
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-secondary time" onclick="updateData(this, 'months')" id="months">
+              3M
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-secondary time active" onclick="updateData(this, 'year')" id="year">
+              1Y
+      </button>
+    </div>
+  </div>
+</div>
+
+<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+<div class="row">
+  <div class="col-12">
+    <div class="btn-toolbar mb-2 mb-md-0 surveys">
+      <div class="btn-group mr-2">
+        {% for question in questions %}
+          <button
+                  type="button"
+                  onclick="toggleDataset(this, '{{ question.slug }}')"
+                  class="btn btn-sm btn-outline-secondary 'active' }}">
+            {{ survey.slug }}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h2>Top voted Questions for Survey {{ object.slug }}</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm" id="detail">
+        <thead>
+          <tr>
+            <th>Plulication Date</th>
+            <th>Code</th>
+            <th>Question</th>
+            <th colspan="3">Total Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in object.top_questions %}
+            <tr>
+              <td>{{ row.pub_date }}</td>
+              <td>{{ row.slug }}</td>
+              <td>{{ row.question_text }}</td>
+              <td>{{ row.user_choices_count }}</td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script>
+  {% include 'surveys/chart.js'  %}
+</script>
+
 {% endblock content %}

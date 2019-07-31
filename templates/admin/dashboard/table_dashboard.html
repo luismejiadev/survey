@@ -1,0 +1,44 @@
+{% load extratags %}
+{% if not module.is_empty %}
+    <style type="text/css">
+        .gray { background: lightgray;}
+        .critical { background: red; color:white; font-weight:bold;}
+        .table {width:100%;}
+        .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th { border: 1px solid #ddd;}
+    </style>
+    <div id="module_{{ module.id }}" class="{{ module.render_css_classes }}">
+        {% if module.show_title %}<h2>{{ module.title }}</h2>{% endif %}
+        <div class="dashboard-module-content table-responsive">
+            {% spaceless %}
+            {% if module.pre_content %}
+            <p>{{ module.pre_content }}</p>
+            {% endif %}
+            {% block module_content %}
+                <table class="table table-striped table-bordered table-hover dataTable no-footer">
+                    <thead>
+                    <tr>
+                        {% for header in module.headers %}
+                        <th> {{header}}</th>
+                        {% endfor %}
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in module.children %}
+                        <tr class="{{ row.css_class }}">
+                            {% for col in module.fields %}
+                                <td {% if forloop.counter > 2 %} style="text-align:right;"{% endif %}>{{row|get_value:col }}</td>
+                            {%endfor%}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% endblock %}
+            {% if module.post_content %}
+            <p>{{ module.post_content }}</p>
+            {% endif %}
+            {% endspaceless %}
+        </div>
+    </div>
+{% endif %}

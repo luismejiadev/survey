@@ -1,0 +1,21 @@
+{% load extratags %}
+    <div id="module_{{ module.id }}" class="{{ module.render_css_classes }}">
+        {% if module.show_title %}<h2>{{ module.title }}</h2>{% endif %}
+        <div class="dashboard-module-content" style="display:block">
+            {% spaceless %}
+            {% if module.pre_content %}
+            <p>{{ module.pre_content }}</p>
+            {% endif %}
+            {% block module_content %}
+                <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+            {% endblock %}
+            {% if module.post_content %}
+            <p>{{ module.post_content }}</p>
+            {% endif %}
+            {% endspaceless %}
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript">
+        {% include 'surveys/chart.js' %}
+    </script>
