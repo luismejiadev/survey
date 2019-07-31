@@ -1,0 +1,9 @@
+{% extends 'surveys/base.html' %}
+
+{% block content %}
+<h2>Welcome!<br> to the Survey App</h2>
+<p><a href="https://www.linkedin.com/in/luiscarlosmejia/" target="_blank">By: Luis Carlos Mejia</a></p>
+{% include 'surveys/rocket.html' %}
+<p><a class="btn btn-primary btn-primary" href="{% url 'index' %}">Launch</a></p>
+{% endblock content %}
+{% block footer %}{% endblock footer %}

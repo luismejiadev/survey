@@ -1,0 +1,22 @@
+<form action="{% url 'user_choice' question_id=question.id %}"  method="post">
+    {% csrf_token %}
+    <div class="card text-center">
+      <div class="card-header">
+        {{ question.id }} → {{ question.question_text }}
+      </div>
+      <ul class="list-group list-group-flush">
+      {% for choice in question.choice_set.all %}
+        <li class="list-group-item custom-control custom-radio">
+             <input type="hidden" name="question" value="{{question.id}}">
+             <input type="radio" name="choice" value="{{choice.id}}" id="{{choice.id}}" class="form-control custom-control-input" required autofocus>
+            <label class="custom-control-label" for="{{choice.id}}">
+                {{ choice.choice_text }}
+            </label>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="card-footer">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      </div>
+    </div>
+</form>

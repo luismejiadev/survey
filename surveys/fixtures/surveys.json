@@ -1,0 +1,12 @@
+[
+{
+    "model": "surveys.survey",
+    "pk": 1,
+    "fields": {
+        "slug": "2019",
+        "start_date": "2019-07-30",
+        "end_date": "2019-07-30",
+        "is_active": true
+    }
+}
+]
