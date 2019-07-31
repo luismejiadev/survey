@@ -65,11 +65,25 @@ docker-compose up
 
 ```
 
-## Setup database ##
+
+Loading Data
+----------------
+
+Load fixtures for Question, Choice, and UserChoice models:
+
+```
+python manage.py load_surveys_data
 
 ```
 
+Running tests
+----------------
+
 ```
+python manage.py test --settings=settings.test
+
+```
+
 
 ## Watch RabbitMQ Queues ##
 
