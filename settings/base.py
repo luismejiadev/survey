@@ -114,3 +114,26 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 
+LOGIN_REDIRECT_URL='index'
+LOGOUT_REDIRECT_URL='index'
+
+# REDIS SETTINGS
+REDIS_PORT = os.environ.get('REDIS_PORT', '6379')
+REDIS_HOST = os.environ.get('REDIS_HOST', 'redis_db')
+REDIS_DB = 0
+
+# CELERY / RABBITMQ SETTINGS
+BROKER_URL = "amqp://{user}:{password}@{host}:{port}/{vhost}".format(
+    user=os.environ.get('RABBITMQ_DEFAULT_USER', 'rabbitmq_user'),
+    password=os.environ.get('RABBITMQ_DEFAULT_PASS', 'rabbitmq_pass'),
+    host=os.environ.get('RABBITMQ_HOST', 'rabbitmq_host'),
+    port=os.environ.get('RABBITMQ_DEFAULT_PORT', '5672'),
+    vhost=os.environ.get('RABBITMQ_DEFAULT_VHOST', 'survey_app')
+)
+CELERY_BROKER_URL=BROKER_URL
+CELERY_RESULT_BACKEND = "redis"
+CELERY_TASK_RESULT_EXPIRES = 60 * 60 * 24 * 7
+
+
+CELERY_REDIS_HOST = REDIS_HOST
+CELERY_REDIS_PORT = 6379
