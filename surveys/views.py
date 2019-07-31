@@ -91,3 +91,26 @@ class SurveyListView(LoginRequiredMixin, ListView):
 
 class SurveyDetailView(LoginRequiredMixin, DetailView):
     model = Survey
+
+
+def questions_view(request, slug):
+    interval = request.GET.get('interval', 'year')
+    labels = []
+    data = []
+    try:
+        obj = Survey.objects.get(slug=slug)
+        for question in obj.get_top_questions(interval):
+            labels.append(question.slug)
+            data.append(question.user_choices_count)
+        responsedict = {
+            'data': data,
+            'labels': labels
+        }
+    except Survey.DoesNotExist:
+        pass
+
+    responsedict = {
+        'data': data,
+        'labels': labels
+    }
+    return HttpResponse(json.dumps(responsedict))
