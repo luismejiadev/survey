@@ -35,5 +35,3 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-ALLOWED_HOSTS = []
-DEBUG = True
