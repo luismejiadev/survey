@@ -55,3 +55,24 @@ services:
         ports:
           - "5672:5672"
           - "15672:15672"
+
+    survey-celery:
+        build:
+          context: .
+          dockerfile: ./compose/django/Dockerfile
+        image: survey_django
+        container_name: survey-celery
+        restart: unless-stopped
+        env_file:
+          - ./enviroments/development.env
+        depends_on:
+          - survey-mysql
+          - survey-redis
+          - survey-rabbitmq
+        volumes:
+          - .:/srv/survey
+        links:
+          - "survey-mysql:mysql_db"
+          - "survey-redis:redis_db"
+          - "survey-rabbitmq:rabbitmq_host"
+        command: celery worker -A app_survey --queues surveys,stats --loglevel INFO
