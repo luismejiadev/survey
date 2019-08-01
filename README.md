@@ -64,12 +64,13 @@ Progress bars are made for such time-taking actions(as surveys). The thought beh
 ## What can you find in this app?
 
 
-This project use Docker-compose to start 4 containers:
+This project use Docker-compose to start 5 containers:
 
 * Django-App
 * MySQL
 * RabbitMQ
 * Redis
+* Celery
 
 ## Start Containers ##
 

@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 def increment_vote(choice_id):
     from .models import Choice
     logger.info("increment {0}".format(choice_id))
-    Choice.objects.filter(pk=choice_id).update(votes=F('votes')+1)
+    Choice.active_objects.filter(pk=choice_id).update(votes=F('votes')+1)
     logger.info("done")
 
 

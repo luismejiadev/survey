@@ -5,6 +5,7 @@ from django.contrib import messages as flash_messages
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 1
+    readonly_fields = ['votes', 'stats_votes']
 
 class QuestionAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
