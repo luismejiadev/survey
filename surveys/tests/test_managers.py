@@ -1,12 +1,16 @@
 import datetime
 from django.test import TestCase
 from surveys.managers import QuestionManager
-from surveys.models import Question
+from surveys.models import Question, Survey
 
 class QuestionManagerTestCase(TestCase):
     def setUp(self):
         now =  datetime.datetime.now()
-        Question.objects.create(question_text="how are you?", pub_date=now)
+        self.survey = Survey.objects.create(slug='2019')
+        Question.objects.create(
+            question_text="how are you?",
+            pub_date=now,
+            survey=self.survey)
 
     def test_random_get_with_empty_active_queryset(self):
         Question.objects.all().update(is_active=False)
