@@ -1,6 +1,6 @@
 ## Django Survey App
 
-[Live Demo](http://luismejia.dev/)
+[Live Demo](https://luismejia.dev/)
 
 
 |  Landing             |  Survey Form  |
@@ -64,12 +64,12 @@ Progress bars are made for such time-taking actions(as surveys). The thought beh
 ## What can you find in this app?
 
 
-This project use Docker-compose to start 5 containers:
+This project uses Docker-compose to start 5 containers:
 
 * Django-App
 * MySQL
-* RabbitMQ
 * Redis
+* RabbitMQ
 * Celery
 
 
