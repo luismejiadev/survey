@@ -50,6 +50,8 @@ class Survey(models.Model):
             start_date = datetime.date.today() - datetime.timedelta(weeks=1)
         elif interval == 'month':
             start_date = datetime.date.today() - datetime.timedelta(weeks=4)
+        elif interval == 'months':
+            start_date = datetime.date.today() - datetime.timedelta(weeks=12)
         else:
             start_date = datetime.date.today() - datetime.timedelta(days=365)
         return start_date
