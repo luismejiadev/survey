@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 from .managers import ActiveManager, QuestionManager
 import datetime
-from .utils import survey_end_date
+from .utils import survey_end_date, get_redis
 
 
 class Survey(models.Model):
@@ -87,6 +87,15 @@ class Choice(models.Model):
 
     def __str__(self):
         return "{0}: {1}".format(self.question.slug, self.choice_text)
+
+    @property
+    def stats_votes(self):
+        redis_value = get_redis().get(self.redis_key) or 0
+        return int(redis_value)
+
+    @property
+    def redis_key(self):
+        return "Choice%s" % self.id
 
 class UserChoice(models.Model):
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
