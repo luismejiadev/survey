@@ -11,7 +11,7 @@ from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .models import UserChoice, Question, Survey
-from .tasks import increment_vote
+from .tasks import increment_vote, increment_counter
 
 logger = logging.getLogger(__name__)
 
@@ -77,6 +77,7 @@ class UserChoiceCreateView(RandomQuestionMixin, CreateView):
             form.instance.session_key = self.current_session_key
         form.save()
         increment_vote.delay(form.instance.choice_id)
+        increment_counter.delay(form.instance.choice_id)
         messages.success(self.request, 'Your choice was save successfully.')
         return super().form_valid(form)
 
