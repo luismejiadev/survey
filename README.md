@@ -103,3 +103,7 @@ python manage.py test --settings=settings.test
 ```
 docker exec -it survey-rabbitmq sh /var/lib/rabbitmq/watch-rabbitmq.sh
 ```
+
+
+![Survey App - RabbitMQ](./docs/images/watch-rabbitmq.png)
+
