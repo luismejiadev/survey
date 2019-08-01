@@ -101,5 +101,9 @@ python manage.py test --settings=settings.test
 ## Watch RabbitMQ Queues ##
 
 ```
-sudo docker exec -it app-rabbitmq sh /var/lib/rabbitmq/watch-rabbitmq.sh
+docker exec -it survey-rabbitmq sh /var/lib/rabbitmq/watch-rabbitmq.sh
 ```
+
+
+![Survey App - RabbitMQ](./docs/images/watch-rabbitmq.png)
+
