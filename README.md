@@ -72,6 +72,10 @@ This project use Docker-compose to start 5 containers:
 * Redis
 * Celery
 
+
+![Survey App - Arch](./docs/images/diagram.png)
+
+
 ## Start Containers ##
 
 ```
