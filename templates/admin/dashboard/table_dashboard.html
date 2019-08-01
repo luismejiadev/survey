@@ -1,9 +1,10 @@
 {% load extratags %}
 {% if not module.is_empty %}
     <style type="text/css">
-        .gray { background: lightgray;}
+        .gray { background: lightgray; }
         .critical { background: red; color:white; font-weight:bold;}
-        .table {width:100%;}
+        .table { width:100%; }
+        .table-responsive{ overflow: scroll; }
         .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th { border: 1px solid #ddd;}
     </style>
     <div id="module_{{ module.id }}" class="{{ module.render_css_classes }}">
