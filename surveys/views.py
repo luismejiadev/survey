@@ -104,7 +104,7 @@ def questions_view(request, slug):
         obj = Survey.objects.get(slug=slug)
         for question in obj.get_top_questions(interval):
             labels.append(question.slug)
-            data.append(question.user_choices_count)
+            data.append(question.count)
         responsedict = {
             'data': data,
             'labels': labels
