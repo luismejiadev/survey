@@ -1,5 +1,5 @@
 celery==4.3.0
-Django==2.2.13
+Django==2.2.20
 django-admin-tools==0.8.1
 django-celery==3.3.0
 mysqlclient==1.4.2.post1
