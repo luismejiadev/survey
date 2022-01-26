@@ -3,6 +3,6 @@ Django==2.2.13
 django-admin-tools==0.8.1
 django-celery==3.3.0
 mysqlclient==1.4.2.post1
-numpy==1.17.0
+numpy==1.21.0
 pandas==0.25.0
 redis==3.3.2
