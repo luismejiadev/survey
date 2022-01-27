@@ -2,6 +2,8 @@
 
 [Live Demo](https://luismejia.dev/)
 
+[RETO CODIGO FACILITO - Diapositivas](https://docs.google.com/presentation/d/1PhgcbY8gemu4mULKRSOHb-Ap1H0s9fYa5ko5opNvcRM/edit#slide=id.g110b33dcd69_0_0)
+
 
 |  Landing             |  Survey Form  |
 | :-------------------------:|:-------------------------:|
